@@ -9,6 +9,10 @@
 import UIKit
 import CoreData
 
+var context: NSManagedObjectContext! {
+    return (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,7 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let productsVC = ProductsViewController()
+        let navigationController = BaseNavigationController(rootViewController: productsVC)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
         return true
     }
 
