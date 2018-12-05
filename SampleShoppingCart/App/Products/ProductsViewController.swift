@@ -17,6 +17,7 @@ final class ProductsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        
     }
 
     private func configureTableView() {
