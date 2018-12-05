@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProductsViewController.swift
 //  SampleShoppingCart
 //
 //  Created by Fernando Ortiz on 23/11/2018.
@@ -8,13 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ProductsViewController: BaseViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
 
-}
+   
 
+}
